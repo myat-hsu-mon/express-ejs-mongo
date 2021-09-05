@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    <style>
+        main {
+          height: 80vh;
+          text-align: center;
+        }
+      </style>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header', {user,token}); %>
+    </header>
+
+    <main class="jumbotron">
+        <div>Profile Page</div>
+        <p>
+            <%= user.name %>
+        </p>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
