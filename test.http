@@ -1,0 +1,33 @@
+@hostName = localhost
+@port = 8000
+@host = {{hostName}} : {{port}}
+@contentType = application/json
+
+
+###
+GET http://localhost:8000 HTTP/1.1
+Content-Type: {{contentType}}
+
+
+###
+GET http://localhost:8000/users 
+Content-Type: {{contentType}}
+
+###
+POST http://localhost:8000/auth/sign-up HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name" : "wah wah",
+    "password" : "password"
+}
+
+###
+
+POST http://localhost:8000/auth/sign-in HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name" : "wah wah",
+    "password" : "password"
+}
